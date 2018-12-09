@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="wrap">
+
+
+    <header>
+        <h1 class="alert alert-warning">Order Form</h1>
+    </header>
+
+    <main>
+        <form>
+            <h5>Buyer</h5>
+            <select class="form-control form-group" id="buyer-select"></select>
+            <button class="btn btn-success form-group m-3" onclick="AddWeapon()">Add weapon</button>
+            <div class="card card-body form-group" id="weapon-container">
+            </div>
+        </form>
+        <a id="add-btn" class="btn btn-block btn-warning" onclick="Insert()" href="order-index.html">Create</a>
+        <a class="btn btn-block" href="order-index.html">Back</a>
+    </main>
+
+</div>
+
+<script type="text/javascript" src="src/order.js"></script>
+<script>
+    LoadBuyerSelect();
+</script>
+</body>
+
+</html>

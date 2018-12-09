@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weapon Form</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="wrap">
+
+
+    <header>
+        <h1 class="alert alert-warning">Weapon Form</h1>
+    </header>
+
+    <main>
+        <form id="create-form">
+            <input id="brand" class="form-control form-group" minlength="2" maxlength="64" type="text"
+                   placeholder="Brand" required>
+            <input id="model" class="form-control form-group" minlength="2" maxlength="64" type="text"
+                   placeholder="Model" required>
+            <input id="caliber" class="form-control form-group" minlength="2" maxlength="64" type="text"
+                   placeholder="Caliber" required>
+            <input id="type" class="form-control form-group d-none" type="text" required>
+            <select class="form-control form-group" id="type-select"
+                    onchange="document.getElementById('type').value=this.options[this.selectedIndex].value;">
+                <option value="Handgun">Handgun</option>
+                <option value="Revolver">Revolver</option>
+                <option value="Sub-machinegun">Sub-machinegun</option>
+                <option value="Assault rifle">Assault rifle</option>
+                <option value="Sniper rifle">Sniper rifle</option>
+            </select>
+            <input id="price" class="form-control form-group" min="0" type="number"
+                   placeholder="Price" required>
+        </form>
+        <a id="add-btn" class="btn btn-block btn-warning" onclick="Insert()" href="buyer-index.html">Create</a>
+        <a class="btn btn-block" href="weapon-index.html">Back</a>
+    </main>
+
+</div>
+
+<script type="text/javascript" src="src/weapon.js"></script>
+<script>
+    let select = document.getElementById('type-select');
+    document.getElementById('type').value = select.options[select.selectedIndex].value;
+</script>
+</body>
+</html>
